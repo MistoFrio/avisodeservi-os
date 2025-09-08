@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animation-delay-500 {
+    animation-delay: 0.5s;
+  }
+  
+  .animation-delay-1000 {
+    animation-delay: 1s;
+  }
+  
+  .animation-delay-1500 {
+    animation-delay: 1.5s;
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations for background elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Hover effects */
+.group:hover .group-hover\:gap-4 {
+  gap: 1rem;
+}
+
+.group:hover .group-hover\:translate-x-1 {
+  transform: translateX(0.25rem);
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  /* Reduce animation intensity on mobile */
+  .animate-bounce {
+    animation-duration: 2s;
+  }
+  
+  .animate-pulse {
+    animation-duration: 3s;
+  }
+  
+  /* Optimize background elements for mobile */
+  .absolute {
+    will-change: transform;
+  }
+  
+  /* Improve touch targets */
+  button {
+    min-height: 44px;
+  }
+  
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-bounce,
+    .animate-pulse,
+    .animate-fade-in {
+      animation: none;
+    }
+    
+    .transition-all,
+    .transition-colors,
+    .transition-transform {
+      transition: none;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  /* Further optimize for small screens */
+  .group:hover .hover\:scale-105 {
+    transform: scale(1.02);
+  }
+  
+  /* Ensure proper spacing on very small screens */
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small screens optimization */
+  .text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  
+  /* Reduce card padding on very small screens */
+  .p-4 {
+    padding: 0.75rem;
+  }
+}
