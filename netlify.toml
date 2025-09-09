@@ -6,7 +6,7 @@
   command = "npm install && npm run build"
   
   # Diretório onde ficam os arquivos de build
-  publish = "project/dist"
+  publish = "dist"
 
 [build.environment]
   # Versão do Node.js
