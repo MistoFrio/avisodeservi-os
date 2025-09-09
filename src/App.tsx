@@ -44,35 +44,15 @@ const services = [
 
 function App() {
   return (
-    <div className="min-h-screen bg-white relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/2 -left-1/2 w-[200%] h-[200%] md:w-full md:h-full bg-gradient-to-br from-red-600 via-red-500 to-red-700 rounded-full animate-pulse opacity-10 transform rotate-45"></div>
-        <div className="absolute -bottom-1/2 -right-1/2 w-[200%] h-[200%] md:w-full md:h-full bg-gradient-to-tl from-red-600 via-red-400 to-red-800 rounded-full animate-pulse opacity-10 transform -rotate-45 animation-delay-1000"></div>
-        
-        {/* Floating particles */}
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 md:w-4 md:h-4 bg-red-500 rounded-full animate-bounce opacity-30"></div>
-        <div className="absolute top-3/4 left-3/4 w-3 h-3 md:w-6 md:h-6 bg-red-600 rounded-full animate-bounce opacity-20 animation-delay-500"></div>
-        <div className="absolute top-1/2 left-1/6 w-2 h-2 md:w-3 md:h-3 bg-red-400 rounded-full animate-bounce opacity-40 animation-delay-1500"></div>
-        <div className="absolute top-1/6 right-1/4 w-3 h-3 md:w-5 md:h-5 bg-red-700 rounded-full animate-bounce opacity-25 animation-delay-2000"></div>
-        
-        {/* Moving waves */}
-        <div className="absolute bottom-0 left-0 w-full h-16 md:h-32 bg-gradient-to-t from-red-50 to-transparent opacity-50">
-          <svg className="absolute bottom-0 w-full h-full" viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none">
-            <path 
-              d="M0,60L48,65C96,70,192,80,288,75C384,70,480,50,576,45C672,40,768,50,864,60C960,70,1056,80,1152,75C1248,70,1344,50,1392,40L1440,30V120H1392C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120H0V60Z" 
-              fill="rgba(239, 68, 68, 0.1)"
-              className="animate-pulse"
-            />
-          </svg>
-        </div>
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-red-50 relative">
+      {/* Simple Background Fade */}
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-red-50/30 to-red-100/20 animate-pulse"></div>
 
       {/* Main Content */}
       <div className="relative z-10">
         {/* Header */}
         <header className="text-center py-8 md:py-12 px-4">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-red-600 mb-4 animate-fade-in leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-red-600 mb-4 leading-tight">
             Portal de Serviços
           </h1>
           <div className="w-20 md:w-32 h-1 bg-red-500 mx-auto rounded-full"></div>
