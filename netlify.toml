@@ -1,12 +1,9 @@
 [build]
-  # Diretório base do projeto
-  base = "project"
-  
-  # Comando para instalar dependências
-  command = "npm install && npm run build"
+  # Comando para instalar dependências e fazer build
+  command = "cd project && npm install && npm run build"
   
   # Diretório onde ficam os arquivos de build
-  publish = "dist"
+  publish = "project/dist"
 
 [build.environment]
   # Versão do Node.js
